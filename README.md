@@ -47,3 +47,7 @@ https://huggingface.co/dbmdz/distilbert-base-turkish-cased
 
 Original CLIP paper:
 https://arxiv.org/abs/2103.00020
+
+Image is taken from:
+https://openai.com/blog/clip/
+
