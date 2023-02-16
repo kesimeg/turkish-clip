@@ -9,6 +9,9 @@ For text encoder pre-trained DistillBert for Turkish language is used.
 Flicker8 dataset is used for training. For Turkish captions TasvirEt dataset is used which is a dataset for Turkish Flicker8 captions.
 
 # What is CLIP?
+
+![alt text](./Images/overview-a.png?raw=true "Title")
+
 CLIP is a vision model introduced by OpenAI. What makes it unique is that it learns visual concepts rather than detecting specific objects.
 This is done by using an image and a caption describing the image. As an example lets assume that we have an image and two captions. Lets assume that one caption suits to the image while the other does not. We feed the image to a vision model and get a feature vector (like Resnet).
 We do the same thing to text with a text based model (like BERT). Then we do multiply the image vector with these two caption vectors. This operation will give us a matrix. Ideally the diagonal of the matrix should be higher then the rest. If you remember from linear algebra product of two vectors divided by their legnths gives something called cosine similarity. This shows how similar two vectors are. Cosine similarity of a vector with it self will be 1. So going back to image and caption vectors we want to make our caption vector and image vector similar. We can do that by increasing the similarity for correct image,caption pairs and decreasing for wrong image,caption pairs. This corresponds to increasing elements in the diagonal and decreasing the rest. After this our model will not just check for specific objects in an image but rather have a visual understanding.
